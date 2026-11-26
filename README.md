@@ -30,6 +30,8 @@
 
 ## User have to format the spreadsheet to work (see more in 'How to use')
 
+## You must have docker installed and running in your machine
+
 # How to use:
 
 ## Clone this repository
@@ -41,12 +43,24 @@
 
 ## Add your 'GROQ_API_KEY' (you can get in website: `https://groq.com`)
 
-## Format the choosed spreadsheet by deleting all empty espaces above the columns, change the column's name for an descriptive name (money => salary) for better responses.
+## The system has a default spreadsheet named `employees.xlsx` that have names and salary values
 
-## Put the choosed spreadsheet in 'Working_spreadsheet'
+## You can put your own spreadsheet, to do that follow the steps bellow:
+### Format the choosed spreadsheet by deleting all empty espaces above the columns, change the column's name for an descriptive name (money => salary) for better responses.
 
-## Change the spreadsheet's name in 'WORKING_SPREADSHEET_NAME' in .env file
+### Wrong way
 
-## Start the system with the command: `python3 -u "you path to Main.py here"`
+![Wrong_way](docs/images/wrong_way.png)
 
-## Ask AI anything about the spreadsheet!
+
+### Right Way
+
+![Right_way](docs/images/right_way.png)
+
+### Put the choosed spreadsheet in 'Working_spreadsheet'
+
+### Change the spreadsheet's name in 'WORKING_SPREADSHEET_NAME' in .env file
+
+### Start the system with the command: `python3 -u "you path to Main.py here"`
+
+### Ask AI anything about the spreadsheet!
