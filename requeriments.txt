@@ -1,0 +1,7 @@
+groq==1.7.0
+python-dotenv
+pandas
+openpyxl
+xlrd
+pyxlsb
+pathlib
