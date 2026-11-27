@@ -1,8 +1,8 @@
-# This is a system that uses AI (Groq) and Pandas to get any information or forecast that user asked
+# This is a system that uses AI (Groq) and Pandas to get any information or forecast that the user asked
 
-# In this system is possible to talk with AI about the spreadsheet, asking for informations, forecasts, ways to get any wanted information and any other thing about the spreadsheet that user wants.
+# In this system is possible to talk with AI about the spreadsheet, asking for informations, forecasts, ways to get any information and any other thing about the spreadsheet that the user wants.
 
-# All private information is on .env, AI didn't recive any private/sensitive information.
+# All private information is on .env, AI didn't receive any private/sensitive information.
 ## All AI code runs into an dokcer container with some security precautions listed below:
 ### - No internet conection
 ### - Ram memory only 1GB
@@ -11,7 +11,7 @@
 ### - User without any linux privileges
 ### - All passed files with read-only property
 ### - Docker script only runs once per call
-### - Remove contatiner after finish running (--rm)
+### - Remove container after finish running (--rm)
 
 # Used technologies:
 ## Python, Docker
@@ -23,7 +23,7 @@
 ## Groq, pathlib, dotenv, subprocess, pandas
 
 # How the system's cycle works:
-## The user ask something to the AI, the AI determines whether it needs to invoke any of the function defined in the system (by `register_tool()`). If necessary, it performs a "function call", writes a Python Code (with Pandas library) into a file named 'groq_working.py', executes that code in docker using one of it tools (`execute_script_in_docker`)`, then give the anser for user's question
+## The user ask something to the AI, the AI determines whether it needs to invoke any of the function defined in the system (by `register_tool()`). If necessary, it performs a "function call", writes a Python Code (with Pandas library) into a file named 'groq_working.py', executes that code in docker using one of it tools (`execute_script_in_docker`)`, then give the answer for the user's question
 
 # System limitations:
 ## At the moment, the system only works with spreadsheets
@@ -46,7 +46,7 @@
 ## The system has a default spreadsheet named `employees.xlsx` that have names and salary values
 
 ## You can put your own spreadsheet, to do that follow the steps bellow:
-### Format the choosed spreadsheet by deleting all empty espaces above the columns, change the column's name for an descriptive name (money => salary) for better responses.
+### Format the chosen spreadsheet by deleting all empty espaces above the columns, change the column's name for an descriptive name (money => salary) for better responses.
 
 ### Wrong way
 
@@ -57,10 +57,11 @@
 
 ![Right_way](docs/images/right_way.png)
 
-### Put the choosed spreadsheet in 'Working_spreadsheet'
+### Put the chosen spreadsheet in 'Working_spreadsheet'
 
 ### Change the spreadsheet's name in 'WORKING_SPREADSHEET_NAME' in .env file
 
 ### Start the system with the command: `python3 -u "you path to Main.py here"`
 
 ### Ask AI anything about the spreadsheet!
+
